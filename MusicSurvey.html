@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>MusicSurvey</title>
+<meta charset="utf-8">
+<style>
+form { background-color:#eacdda;
+	font-family: Arial, sans-serif;
+    padding: 20px; 
+	width: 600px;}
+input, textarea { margin-top: 10px; }
+h1 {background-color: white;
+	padding: 5px;
+	border: 1px solid black;} 
+#location {width: 110px;}
+</style>
+</head>
+<body>
+<form name="musicsurvey" method="get" action="http://www.markmurtha.com/csis128/readform.asp">
+<h1>Music Survey</h1>
+Name: <input type="text" name="name" id="name"><br>
+E-mail: <input type="text" name="email" id="email"><br><br>
+<fieldset><legend>Favorites</legend>
+Select your favorite types of music: <br>
+<input type="checkbox" name="rock" id="rock" value="yes">Rock<br>
+<input type="checkbox" name="blues" id="blues" value="yes">Blues<br>
+<input type="checkbox" name="rap" id="rap" value="yes">Rap<br>
+<input type="checkbox" name="classical" id="classical" value="yes">Classical<br>
+<input type="checkbox" name="jazz" id="jazz" value="yes">Jazz<br>
+</fieldset>
+<br>
+<fieldset><legend>Purchases</legend>Select how often you purchase music:<br>
+<input type="radio" name="purchase" id="year" value="One album per year">One album per year<br>
+<input type="radio" name="purchase" id="sixmonth" value="One album every six months">One album every six months<br>
+<input type="radio" name="purchase" id="month" value="One album per month">One album per month<br>
+<input type="radio" name="purchase" id="week" value="One album per week">One album per week<br>
+<input type="radio" name="purchase" id="other" value="More than one album per week">More than one album per week<br>
+</fieldset>
+<br>
+Where do you most oftern listen to music? (choose one) <br>
+<select size="3" name="location" id="location">
+<option value="anywhere">Anywhere</option>
+<option value="home">Home</option>
+<option value="school">School</option>
+<option value="work">Work</option>
+<option value="car">Car</option>
+<option value="gym">Gym</option>
+</select>
+<br><br>
+What role does music play in your life?<br>
+<textarea name="role" id="role" cols="60" rows="3">Enter your response here</textarea>
+<br>
+<input type="submit" value=Submit>
+<input type="reset" value=Reset>
+</form>
+ <footer>
+Survey created by Diane Krauthamer, <a href="mailto:s1439555@student.mcckc.edu">s1439555@student.mcckc.edu</a>
+</footer>
+</body>
+</html>
+</body>
+</html>
