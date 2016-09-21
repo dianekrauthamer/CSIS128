@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<title>Chapter 14 form</title>
+	
+<meta charset="utf-8">
+
+<style>
+input { display: block;
+	margin-bottom: 1em;
+}
+label { float: left;
+	width: 5em;
+	padding-right: 1em;
+	text-align: right;
+}
+#submit { margin-left: 7em; }
+</style>
+<script>
+function validateForm() {
+if (document.forms[0].userName.value == "") {
+	alert ("Name field cannot be empty.");
+	return false;
+}
+if (document.forms[0].userEmail.value == "") {
+	alert ("Email field cannot be empty.");
+	return false;
+}
+	alert ("Name and email are valid.");
+	return true;
+}
+</script>
+</head>
+
+<body>
+<h1>Chapter 14 form</h1>
+<form method="post"
+      action="http://www.markmurtha.com/csis128/readform.asp"
+	onsubmit="return validateForm();">
+<label for="userName">Name: </label>
+<input type="text" name="userName" id="userName">
+<label for="userEmail">Email: </label>
+<input type="text" name="userEmail" id="userEmail">
+<input type="submit" value="Sign Up Now" id="submit">
+</form>
+
+
+</body>
+
+</html>
