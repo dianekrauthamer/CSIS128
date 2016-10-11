@@ -5,6 +5,20 @@
 <title>Class Consciousness</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
+<script>
+function validateForm() {
+if (document.forms[0].myName.value == "") {
+	alert ("Name field cannot be empty.");
+	return false;
+}
+if (document.forms[0].myEmail.value == "") {
+	alert ("Email field cannot be empty.");
+	return false;
+}
+	alert ("Name and email are valid.");
+	return true;
+}
+</script>
 </head>
 <body>
 <header>
@@ -21,17 +35,33 @@
 </ul>
 </nav>
 <main>
- <h2>Contact Us</h2>
-
-<form method="post" action="http://webdevbasics.net/scripts/demo.php">
+<h2>Contact us</h2>
+<form method="post"
+      action="http://www.markmurtha.com/csis128/readform.asp"
+	onsubmit="return validateForm();">
   <label for="myName">Name:</label>
-  <input type="text" name="myName" id="myName">
+  <input type="text" name="myName" id="myName" cols="50" class="required">
   <label for="myEmail">E-mail:</label>
-  <input type="text" name="myEmail" id="myEmail">
-  <label for="myComments">Comments:</label>
-  <textarea name="myComments" id="myComments" rows="8" cols="25"></textarea>
-  <input id="mySubmit" type="submit" value="Submit">
+  <input type="email" name="myEmail" id="myEmail" cols="50" class="required">
+
+ <label for="myPhone">Phone:</label>
+  <input type="tel" name="myPhone" id="myPhone" cols="50" class="required">
+<br><br>
+<fieldset><legend>Reason for Contact</legend>
+<input type="radio" name="reason" id="questions" value="Questions">Questions<br>
+<input type="radio" name="reason" id="submissions" value="Submissions">Submissions<br>
+<input type="radio" name="reason" id="website" value="Problems with the website">Problems with the website?<br>
+<input type="radio" name="reason" id="feedback" value="General feedback">General feedback<br>
+<input type="radio" name="reason" id="other" value="Other">Other<br></fieldset>
+<br>
+
+<label for="myComments">Comments:</label>
+  <textarea name="myComments" id="myComments" rows="8" cols="75" class="required"></textarea>
+<br>
+<input type="submit" id="mySubmit" value=Submit>
+<input type="reset" id="myReset" value=Reset>
 </form>
+
 <br><br>
 </main>
 <footer>Copyright &copy; 2016 Diane Krauthamer</footer>
